@@ -1,6 +1,10 @@
 name: VPN Gate Node Check
 
 on:
+  schedule:
+    # 定时检测：每 30 分钟执行一次。
+    # 如果想改成每 60 分钟执行一次，请将下面这行改为 - cron: "0 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
